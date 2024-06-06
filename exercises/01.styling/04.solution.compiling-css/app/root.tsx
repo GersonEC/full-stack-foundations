@@ -20,7 +20,7 @@ export default function App() {
 				<Links />
 			</head>
 			<body>
-				<p className="p-8 text-xl">Hello World</p>
+				<p className="p-8 text-xl hover:text-green-600">Hello World</p>
 				<Scripts />
 				<KCDShop />
 				<LiveReload />

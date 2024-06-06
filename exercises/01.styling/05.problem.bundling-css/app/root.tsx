@@ -3,6 +3,7 @@ import { Links, LiveReload, Scripts } from '@remix-run/react'
 import faviconAssetUrl from './assets/favicon.svg'
 import { KCDShop } from './kcdshop.tsx'
 // 🐨 Import the cssBundleHref here
+import { cssBundleHref } from '@remix-run/css-bundle'
 import fontStylesheetUrl from './styles/font.css'
 // 🧝‍♂️ I imported the CSS file for you. When you have it working, it'll be obvious
 // ... I promise... 😈
@@ -17,6 +18,7 @@ export const links: LinksFunction = () => {
 		// 🐨 Add the cssBundleHref to the links array
 		// 🦺 feel free to handle the undefined case however you like or ignore
 		// the TypeScript error if you want. I'll show you how I handle it later.
+		{ rel: 'stylesheet', href: cssBundleHref! },
 	]
 }
 
@@ -27,7 +29,7 @@ export default function App() {
 				<Links />
 			</head>
 			<body>
-				<p className="p-8 text-xl">Hello World</p>
+				<p className="p-8 text-xl text-red-500">Hello World</p>
 				<Scripts />
 				<KCDShop />
 				<LiveReload />
